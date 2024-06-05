@@ -1,0 +1,4 @@
+/data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev2/lib/python3.8/site-packages/pyInfinityFlow/InfinityFlow_Utilities.py:842: FutureWarning: In a future version, `df.iloc[:, i] = newvals` will attempt to set the values inplace instead of always setting a new array. To retain the old behavior, use either `df[df.columns[i]] = newvals` or, if columns are non-unique, `df.isetitem(i, newvals)`
+  predicted_var.loc[:,"IMPUTED"] = True
+/data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev2/lib/python3.8/site-packages/pyInfinityFlow/InfinityFlow_Utilities.py:855: FutureWarning: In a future version, object-dtype columns with all-bool values will not be included in reductions with bool_only=True. Explicitly cast to bool dtype instead.
+  var = pd.concat([raw_sub_p_adata.var, predicted_var]),

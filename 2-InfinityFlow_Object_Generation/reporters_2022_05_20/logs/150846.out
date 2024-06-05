@@ -1,0 +1,60 @@
+Sender: LSF System <srv-lsf@bmi-460g8-53>
+Subject: Job 150846: <#BSUB -L /bin/bash;#BSUB -W 24:00;#BSUB -n 12;#BSUB -R "span[ptile=4]";#BSUB -M 80000;#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.err;#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.out; cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20; # module load anaconda3;# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev;  /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/Source/pyInfinityFlow/pyInfinityFlow.py -i --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_05_20_PE --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/reporters_2022_05_20/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_05_20_reporters_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12> in cluster <BMICluster> Exited
+
+Job <#BSUB -L /bin/bash;#BSUB -W 24:00;#BSUB -n 12;#BSUB -R "span[ptile=4]";#BSUB -M 80000;#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.err;#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.out; cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20; # module load anaconda3;# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev;  /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/Source/pyInfinityFlow/pyInfinityFlow.py -i --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_05_20_PE --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/reporters_2022_05_20/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_05_20_reporters_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12> was submitted from host <bmi-460g9-23> by user <fero3l> in cluster <BMICluster> at Thu Oct 27 00:58:24 2022
+Job was executed on host(s) <4*bmi-460g8-53>, in queue <normal>, as user <fero3l> in cluster <BMICluster> at Thu Oct 27 00:58:24 2022
+                            <4*bmi-460g8-43>
+                            <4*bmi-460g9-18>
+</tmp/.lsbtmp41736> was used as the home directory.
+</data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20> was used as the working directory.
+Started at Thu Oct 27 00:58:24 2022
+Terminated at Thu Oct 27 00:58:28 2022
+Results reported at Thu Oct 27 00:58:28 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -L /bin/bash
+#BSUB -W 24:00
+#BSUB -n 12
+#BSUB -R "span[ptile=4]"
+#BSUB -M 80000
+#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.err
+#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/%J.out
+
+cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20
+
+# module load anaconda3
+# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev
+
+
+/data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/Source/pyInfinityFlow/pyInfinityFlow.py -i --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_05_20_PE --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/reporters_2022_05_20/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_05_20_reporters_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12
+
+
+
+------------------------------------------------------------
+
+Exited with exit code 2.
+
+Resource usage summary:
+
+    CPU time :                                   0.75 sec.
+    Max Memory :                                 4 MB
+    Average Memory :                             2.00 MB
+    Total Requested Memory :                     240000.00 MB
+    Delta Memory :                               239996.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                4
+    Run time :                                   0 sec.
+    Turnaround time :                            4 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file </data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/reporters_2022_05_20/logs/150846.err> for stderr output of this job.
+

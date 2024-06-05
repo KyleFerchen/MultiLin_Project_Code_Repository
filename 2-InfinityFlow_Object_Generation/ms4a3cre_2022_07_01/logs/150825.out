@@ -1,0 +1,127 @@
+Sender: LSF System <srv-lsf@bmi-460g9-13>
+Subject: Job 150825: <#BSUB -L /bin/bash;#BSUB -W 24:00;#BSUB -n 12;#BSUB -R "span[ptile=4]";#BSUB -M 80000;#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.err;#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.out; cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01; # module load anaconda3;# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev;  pyInfinityFlow --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_07_00_Ms4a3cre_tdtomato_add/ --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/ms4a3cre_2022_07_01/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_07_00_ms4a3cre_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12> in cluster <BMICluster> Done
+
+Job <#BSUB -L /bin/bash;#BSUB -W 24:00;#BSUB -n 12;#BSUB -R "span[ptile=4]";#BSUB -M 80000;#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.err;#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.out; cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01; # module load anaconda3;# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev;  pyInfinityFlow --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_07_00_Ms4a3cre_tdtomato_add/ --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/ms4a3cre_2022_07_01/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_07_00_ms4a3cre_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12> was submitted from host <bmi-460g9-23> by user <fero3l> in cluster <BMICluster> at Thu Oct 27 00:57:32 2022
+Job was executed on host(s) <4*bmi-460g9-13>, in queue <normal>, as user <fero3l> in cluster <BMICluster> at Thu Oct 27 00:57:33 2022
+                            <4*bmi-460g8-46>
+                            <4*bmi-460g9-21>
+</tmp/.lsbtmp41736> was used as the home directory.
+</data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01> was used as the working directory.
+Started at Thu Oct 27 00:57:33 2022
+Terminated at Thu Oct 27 01:02:14 2022
+Results reported at Thu Oct 27 01:02:14 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -L /bin/bash
+#BSUB -W 24:00
+#BSUB -n 12
+#BSUB -R "span[ptile=4]"
+#BSUB -M 80000
+#BSUB -e /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.err
+#BSUB -o /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/%J.out
+
+cd /data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01
+
+# module load anaconda3
+# conda activate /data/salomonis2/LabFiles/Kyle/Env/pyInfinityFlow_dev
+
+
+pyInfinityFlow --data_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_07_00_Ms4a3cre_tdtomato_add/ --out_dir /data/salomonis2/LabFiles/Kyle/Analysis/2022_10_26_pyInfinityFlow_grimes_data/outputs/pyInfinityFlow_outputs/ms4a3cre_2022_07_01/ --backbone_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2021_12_13_Reporter_backbone_anno.csv --infinity_marker_annotation /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/pyInfinityFlow_annotations/2022_07_00_ms4a3cre_infinity_marker_anno.csv --random_state 7 --use_logicle_scaling True --normalization_method None --n_events_train 0 --n_events_validate 0 --ratio_for_validation 0.2 --separate_backbone_reference /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_06_28_PE/export_KF_Infinity_Flow_Add_PEs-Infinity_Markers_PE-CD131_Unmixed_Live.fcs --add_umap False --find_clusters False --find_markers False --make_feature_plots False --use_pca True --n_pc 15 --n_pc_plot_qc 50 --save_h5ad True --save_feather True --save_file_handler True --save_regression_models True --verbosity 3 --n_cores 12
+
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1189.73 sec.
+    Max Memory :                                 9209 MB
+    Average Memory :                             2533.40 MB
+    Total Requested Memory :                     240000.00 MB
+    Delta Memory :                               230791.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                67
+    Run time :                                   279 sec.
+    Turnaround time :                            282 sec.
+
+The output (if any) follows:
+
+
+
+Running InfinityFlow from single directory, with all input .fcs files using the same channels for backbone...
+	Input directory: /data/salomonis2/LabFiles/Kyle/Analysis/2022_07_01_Infinity_Flow_Update/input/gated_live_fcs_input/2022_07_00_Ms4a3cre_tdtomato_add/
+
+DEBUG: add_umap value: False
+DEBUG: find_clusters value: False
+DEBUG: find_markers value: False
+DEBUG: make_feature_plots value: False
+DEBUG: VERBOSITY value: 3
+Isotype controls will not be used...
+DEBUG: Checking separate backbone reference fcs file for necessary backbone channels...
+DEBUG: Streaming through .fcs files to specify events for training, validation, and prediction...
+DEBUG: Input file export_KF_Infinity_Flow_Add_Ms4a3cre_tdtom-Sample-Ms4a3cre_tdTomato_working_Unmixed_Live.fcs was found to have 2036349 events
+DEBUG: 	1629080 events will be used for training...
+DEBUG: 	407269 events will be used for validation...
+
+
+
+Reading in data from .fcs files for model training...
+DEBUG: 		Reading in the data for InfinityMarker Ms4a3-cre-tdTomato...
+Applying Logicle normalization to data...
+	Building regression model for Ms4a3-cre-tdTomato...
+DEBUG: Setting n_jobs to 12 and random_state to 7
+DEBUG: 		XGBoost regression model trained in 106.00 seconds.
+
+Reading in data from .fcs files for model validation...
+DEBUG: 		Reading in the data for InfinityMarker Ms4a3-cre-tdTomato...
+Applying Logicle normalization to data...
+Obtaining validation metrics for regression models...
+		Working on Ms4a3-cre-tdTomato...
+Reading in data from separate_backbone_reference .fcs file for final Infinity Flow object...
+Applying Logicle normalization to data...
+Making predictions for final InfinityFlow object...
+		Working on Ms4a3-cre-tdTomato...
+DEBUG: add_umap value: False
+DEBUG: find_clusters value: False
+DEBUG: find_markers value: False
+DEBUG: make_feature_plots value: False
+Writing out base prediction values to fcs file...
+Omitting spillover matrix...
+WARNING! TEXT segment value for key $P22S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P23S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P24S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P25S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P29S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P30S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P31S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P32S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P33S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P34S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P35S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P22S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P23S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P24S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P25S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P29S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P30S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P31S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P32S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P33S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P34S is empty. Excluding from written file.
+WARNING! TEXT segment value for key $P35S is empty. Excluding from written file.
+Saving Infinity Flow object as h5ad file...
+Saving Infinity Flow object as feather file...
+Done.
+Base InfinityFlow Pipeline took 243.74 seconds for input dataset.
+
+
+PS:
+
+Read file </data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/test_scripts/grimes_lab_infinity_flow/ms4a3cre_2022_07_01/logs/150825.err> for stderr output of this job.
+

@@ -1,0 +1,10 @@
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+import: unable to open X server `bmi-460g9-23:11.0' @ error/import.c/ImportImageCommand/344.
+/data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/Source/pyInfinityFlow/pyInfinityFlow.py: line 9: syntax error near unexpected token `action='ignore','
+/data/salomonis2/LabFiles/Kyle/Development/pyInfinityFlow/Source/pyInfinityFlow/pyInfinityFlow.py: line 9: `warnings.filterwarnings(action='ignore', category=UserWarning)'
