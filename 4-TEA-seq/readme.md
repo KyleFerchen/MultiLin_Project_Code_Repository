@@ -55,14 +55,26 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [3. Base resolution contribution score predictions](#3-base-resolution-contribution-score-predictions)
 - [4. Seqlet pattern clustering with tfmodisco](#4-seqlet-pattern-clustering-with-tfmodisco)
 
+[IX. Downstream analysis of seqlets](#ix-downstream-analysis-of-seqlets)
+
+- [1. Scanning CWM patterns across all peaks](#1-scanning-cwm-patterns-across-all-peaks)
+- [2. Score seqlet patterns](#2-score-seqlet-patterns)
+- [3. Seqlet to gene correlations within TADs](#3-seqlet-to-gene-correlations-within-tads)
+- [4. Seqlet to gene correlation heatmap](#4-seqlet-to-gene-correlation-heatmap)
+- [5. Seqlet and gene expression heatmaps](#5-seqlet-and-gene-expression-heatmaps)
+- [6. Identify marker genes for pseudobulk clusters](#6-identify-marker-genes-for-pseudobulk-clusters)
+- [7. Seqlet to gene correlation heatmap - marker genes](#7-seqlet-to-gene-correlation-heatmap---marker-genes)
+- [8. Seqlet and gene expression heatmaps](#8-seqlet-and-gene-expression-heatmaps)
 
 
+[X. Gene regulatory network analysis](#x-gene-regulatory-network-analysis)
 
-
-
-
-
-
+- [1. Identify and score TF to gene connections](#1-identify-and-score-tf-to-gene-connections)
+- [2. Score the TF to gene links](#2-score-the-tf-to-gene-links)
+- [3. Score TF activities in clusters](#3-score-tf-activities-in-clusters)
+- [4. Score TF to gene links for surface proteins](#4-score-tf-to-gene-links-for-surface-proteins)
+- [5. Seqlet to gene correlation heatmap - surface proteins](#5-seqlet-to-gene-correlation-heatmap---surface-proteins)
+- [6. Seqlet to gene correlation subplots - surface proteins](#6-seqlet-to-gene-correlation-subplots---surface-proteins)
 
 
 <br><br>
@@ -302,31 +314,102 @@ The output of tfmodisco is only a subset of all the potential seqlets that could
 
 After identifying sites in all peaks that match CWM DNA sequence patterns identified by tfmodisco, we score each of them for how well they match to the CWM scores. This is a dot product between the observed contribution value and the CWM values filtered to the bases with high frequency of occurrence in the CWM motif. We then filter the called seqlets to those that have a score greater than the 5th percentile of scores from the set defined by tfmodisco. This gives us the highest scoring seqlets that match a pattern identified by tfmodisco across all queried regions.
 
+<br>
 
+## 3. Seqlet to gene correlations within TADs
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
+>['seqlet_analysis/seqlet_to_gene_correlation_within_tads.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_within_tads.ipynb)
 
-# XXXX. HEADER
-
-## 1. TITLE1 
-
-***''***
-
-EXPLANATIONNNNNNNN
+For each of the expressed genes, we identify seqlets within the same TAD as the gene, and calculate a Pearson correlation coefficient value across the clusters for the dot product score from the previous script, and the log2-CPTT normalized centroid gene expression value. This gives an association between seqlets and genes that are expressed highly in the same states. The seqlets are filtered to those with a Pearson correlation > 0.4 to get the strongest associations.
 
 <br>
 
-## 2. TITLE2 
+## 4. Seqlet to gene correlation heatmap
 
-***''***
+>['seqlet_analysis/seqlet_to_gene_correlation_heatmap.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_heatmap.ipynb)
 
-EXPLANATIONNNNNNNN
+Generates the pairwise Pearson correlation heatmap between gene expression and seqlet contribution score values.
+
+<br>
+
+## 5. Seqlet and gene expression heatmaps
+
+>['seqlet_analysis/seqlet_to_gene_correlation_heatmap_subplots_all_5k.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_heatmap_subplots_all_5k.ipynb)
+
+This generates the paired seqlet and gene expression subplots for the correlation heatmap. This visualizes the level across the clusters.
+
+<br>
+
+## 6. Identify marker genes for pseudobulk clusters
+
+>['seqlet_analysis/get_marker_genes_for_subplots.ipynb'](seqlet_analysis/get_marker_genes_for_subplots.ipynb)
+
+Nominates the top marker genes for each clusters. This focuses to the critical changes in gene expression between clusters.
+
+<br>
+
+## 7. Seqlet to gene correlation heatmap - marker genes
+
+>['seqlet_analysis/seqlet_to_gene_correlation_heatmap_tea_seq_markers.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_heatmap_tea_seq_markers.ipynb)
+
+Repeat the pairwise gene to seqlet correlation heatmap, but only with the marker genes.
+
+<br>
+
+## 8. Seqlet and gene expression heatmaps
+
+>['seqlet_analysis/seqlet_to_gene_correlation_heatmap_subplots_tea_seq_markers.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_heatmap_subplots_tea_seq_markers.ipynb)
+
+Repeat making the paired seqlet and gene expression subplots for the correlation heatmap focused on the marker gene set. This visualizes the level across the clusters.
 
 <br><br>
 
+# X. Gene regulatory network analysis
 
+Here we are trying to use the seqlet contribution scores as a means to link candidate transcription factors to the genes they regulate.
 
-***''***
-***''***
-***''***
-***''***
+## 1. Identify and score TF to gene connections
+
+>['grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
+
+To assign and score the TF-gene connections, we annotate the seqlets with TF identities by calculating the similarity of the seqlet DNA pattern to previously identified transcription factor motifs (Cisbp2 database). 
+
+## 2. Score the TF to gene links
+
+>['grn/score_tf_activity_in_clusters.ipynb'](grn/score_tf_activity_in_clusters.ipynb)
+
+We score the connections between TFs and genes within each cluster by multiplying the seqlet score, the target gene expression, and the transcription factor gene expression within each cluster.
+
+<br>
+
+## 3. Score TF activities in clusters
+
+>['grn/score_tf_activity_in_clusters.ipynb'](grn/score_tf_activity_in_clusters.ipynb)
+
+To estimate the transcription factor activity in each cluster, we take the sum of all TF to gene link scores provided by the previous step.
+
+<br>
+
+## 4. Score TF to gene links for surface proteins
+
+>['grn/score_tf_to_gene_links_of_surface_proteins.ipynb'](grn/score_tf_to_gene_links_of_surface_proteins.ipynb)
+
+Here, the TF to gene links are filtered to those genes that encode surface proteins.
+
+<br>
+
+## 5. Seqlet to gene correlation heatmap - surface proteins
+
+>['grn/seqlet_to_gene_correlation_heatmap_surface_proteins.ipynb'](grn/seqlet_to_gene_correlation_heatmap_surface_proteins.ipynb)
+
+The pairwise seqlet to gene correlation heatmap is generated here.
+
+<br>
+
+## 6. Seqlet to gene correlation subplots - surface proteins
+
+>['grn/seqlet_to_gene_correlation_heatmap_subplots_surface_protein_terms.ipynb'](grn/seqlet_to_gene_correlation_heatmap_subplots_surface_protein_terms.ipynb)
+
+This code makes the expression heatmaps for the seqlets and the genes encoding surface proteins.
+
+<br>
