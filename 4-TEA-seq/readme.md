@@ -2,7 +2,7 @@
 
 # 4-TEA-seq
 
-In this study, TEA-seq was performed on 2 samples:
+In this study, TEA-seq was performed on 2 samples (2 replicates for each sample):
 
 1. HSC/MPP gated cells
 2. MultiLin gated cells
@@ -16,26 +16,38 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 ## Outline
 [4-TEA-seq](#4-tea-seq)
 
+<div style="padding-left: 40px;">
+
 [I. Initial TEA-seq processing](#i-initial-tea-seq-processing)
 
 - [1. cellranger count](#1-cellranger-count)
+
+<br>
 
 [II. CITE-seq Label Transfer to TEA-seq Data](#ii-cite-seq-label-transfer-to-tea-seq-data)
 
 - [1. Label transfer using modified pyHarmony algorithm](#1-label-transfer-using-modified-pyharmony-algorithm)
 - [2. Validation of label transfer](#2-validation-of-label-transfer)
 
+<br>
+
 [III. Pseudobulk processing of accessibility data](#iii-pseudobulk-processing-of-accessibility-data)
 
 - [1. Split BAM files to TEA-seq cluster annotations ](#1-split-bam-files-to-tea-seq-cluster-annotations)
 - [2. Sort and merge split bams by clusters](#2-sort-and-merge-split-bams-by-clusters)
+
+<br>
 
 [IV. Call peaks on TEA-seq pseudobulk clusters](#iv-call-peaks-on-tea-seq-pseudobulk-clusters)
 
 - [1. Use individual pseudobulk cluster BAM files to call peaks](#1-use-individual-pseudobulk-cluster-bam-files-to-call-peaks)
 - [2. Merge the peak sets called on individual clusters](#2-merge-the-peak-sets-called-on-individual-clusters)
 
+<br>
+
 [V. Create BigWig files](#v-create-bigwig-files)
+
+<br>
 
 [VI. Peak by cell matrix and pseudobulk profiles](#vi-peak-by-cell-matrix-and-pseudobulk-profiles)
 
@@ -43,10 +55,14 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [2. Creating the peak by cell matrix](#2-creating-the-peak-by-cell-matrix)
 - [3. Pseudobulk accessibility profiles for clusters](#3-pseudobulk-accessibility-profiles-for-clusters)
 
+<br>
+
 [VII. Correlate peaks to genes](#vii-correlate-peaks-to-genes)
 
 - [1. Calculate peak to gene correlations within TADs](#1-calculate-peak-to-gene-correlations-within-tads)
 - [2. Visualize peak to gene correlations]()
+
+<br>
 
 [VIII. ChromBPNet](#viii-chrombpnet)
 
@@ -54,6 +70,8 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [2. Model training for ChromBPNet](#2-model-training-for-chrombpnet)
 - [3. Base resolution contribution score predictions](#3-base-resolution-contribution-score-predictions)
 - [4. Seqlet pattern clustering with tfmodisco](#4-seqlet-pattern-clustering-with-tfmodisco)
+
+<br>
 
 [IX. Downstream analysis of seqlets](#ix-downstream-analysis-of-seqlets)
 
@@ -66,6 +84,7 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [7. Seqlet to gene correlation heatmap - marker genes](#7-seqlet-to-gene-correlation-heatmap---marker-genes)
 - [8. Seqlet and gene expression heatmaps](#8-seqlet-and-gene-expression-heatmaps)
 
+<br>
 
 [X. Gene regulatory network analysis](#x-gene-regulatory-network-analysis)
 
@@ -75,6 +94,8 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [4. Score TF to gene links for surface proteins](#4-score-tf-to-gene-links-for-surface-proteins)
 - [5. Seqlet to gene correlation heatmap - surface proteins](#5-seqlet-to-gene-correlation-heatmap---surface-proteins)
 - [6. Seqlet to gene correlation subplots - surface proteins](#6-seqlet-to-gene-correlation-subplots---surface-proteins)
+
+</div>
 
 
 <br><br>
@@ -413,3 +434,21 @@ The pairwise seqlet to gene correlation heatmap is generated here.
 This code makes the expression heatmaps for the seqlets and the genes encoding surface proteins.
 
 <br>
+
+
+
+[Back to Outline](#outline)
+
+<style>
+a[href="#outline"] {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    z-index: 9999;
+}
+</style>
