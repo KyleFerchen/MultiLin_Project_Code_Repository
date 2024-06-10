@@ -1,8 +1,3 @@
-
-<head>
-<link rel="stylesheet" href="./resource/style.css">
-</head>
-
 # 1-CITE-seq Atlas Generation
 
 Here, we describe the code used to create the CITE-seq Atlas.
@@ -134,5 +129,4 @@ This script was used to plot cell populations over the integrated RNA-seq UMAP
 
 Here, we identified marker genes and marker ADTs for the 87 cluster populations using markerFinder, and plotted those markers as heatmaps.
 
-
-[Back to Outline](#outline)
+<a href="#outline" style="display: block; position: fixed; bottom: 20px; right: 20px; padding: 10px; background-color: #333; color: #fff; text-decoration: none; z-index: 9999;">Back to Outline</a>
