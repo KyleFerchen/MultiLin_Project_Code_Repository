@@ -1,3 +1,8 @@
+
+<head>
+<link rel="stylesheet" href="./resource/style.css">
+</head>
+
 # 1-CITE-seq Atlas Generation
 
 Here, we describe the code used to create the CITE-seq Atlas.
@@ -131,17 +136,3 @@ Here, we identified marker genes and marker ADTs for the 87 cluster populations 
 
 
 [Back to Outline](#outline)
-
-<style>
-a[href="#outline"] {
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    z-index: 9999;
-}
-</style>
