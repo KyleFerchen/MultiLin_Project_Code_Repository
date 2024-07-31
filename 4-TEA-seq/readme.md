@@ -226,6 +226,8 @@ These scripts used snaptools to create the peak by cell matrix. So we took the m
 
 This script was used to pull out the peak by cell matrices from the snap objects and save them as separate sparse .mtx files.
 
+>**Note**: the individual peak by cell matrices were merged with the following script: [`merge_pmats.py`](pseudobulk_accessibility_processing/snaptools/merge_pmats_macs2_p_0_001_with_tss_added.py)
+
 <br>
 
 >['create_centroids_from_pmats.ipynb'](pseudobulk_accessibility_processing/snaptools/create_centroids_from_pmats.ipynb)
