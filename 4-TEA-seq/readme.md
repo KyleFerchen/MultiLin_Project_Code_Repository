@@ -327,7 +327,9 @@ Each of these script files identifies CWM patterns for each of the contribution 
 
 >['seqlet_analysis/gimmemotifs_scan_modisco_patterns_for_all_peaks.ipynb'](seqlet_analysis/gimmemotifs_scan_modisco_patterns_for_all_peaks.ipynb)
 
-The output of tfmodisco is only a subset of all the potential seqlets that could be found from the contribution score files. To search for all seqlet sites that match a CWM pattern, here we implement a custom script to scan for the DNA sequence that matches each of the CWM patterns identified by tfmodisco. Note that we use the [`seqlet_analysis/generate_motif_files_from_modisco_h5_files.py`](seqlet_analysis/generate_motif_files_from_modisco_h5_files.py) script to extract the base frequencies of the CWM patterns identified by tfmodisco as a .pfm file for the scanning.
+The output of tfmodisco is only a subset of all the potential seqlets that could be found from the contribution score files. To search for all seqlet sites that match a CWM pattern, here we implement a custom script to scan for the DNA sequence that matches each of the CWM patterns identified by tfmodisco. 
+
+>**Note**: we use the [`seqlet_analysis/generate_motif_files_from_modisco_h5_files.py`](seqlet_analysis/generate_motif_files_from_modisco_h5_files.py) script to extract the base frequencies of the CWM patterns identified by tfmodisco as a .pfm file for the scanning and we use the ['seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py'](seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py) script to extract the seqlet positions as a bed file.
 
 <br>
 
