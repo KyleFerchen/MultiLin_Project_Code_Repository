@@ -10,7 +10,7 @@ Notes:
 usage_statement = """
     Usage:
         generate_seqlet_annotation_from_modisco_h5_file.py
-            <path_h5_file> <path_peaks_file> <output_dir> <file_prefix>
+            <path_h5_file> <path_peaks_file> <output_dir> <file_prefix> <width>
 
     Positioned arguments:
 
@@ -20,6 +20,8 @@ usage_statement = """
             funcion. It should have the suffix: ".interpreted_regions.bed"
         3. <output_dir>: the output directory to which to save the bed file
         4. <file_prefix>: the name you want to prefix the output file
+        5. <width>: the width applied during the tfmodisco-lite motifs execution
+            (probably 400, depending on the tfmodisco-lite version)
 
     """
 
@@ -28,8 +30,6 @@ import sys
 import pandas as pd
 import numpy as np
 import h5py
-
-WIDTH = 250
 
 def map_ohe_to_seq(input_ohe):
     tmp_seq = []
@@ -43,7 +43,7 @@ def map_ohe_to_seq(input_ohe):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
+    if len(sys.argv) != 6:
         print(usage_statement)
         raise ValueError('Command requires four positional arguments.')
 
@@ -52,6 +52,9 @@ if __name__ == "__main__":
     path_peaks_file = sys.argv[2]
     output_dir = sys.argv[3]
     file_prefix = sys.argv[4]
+    WIDTH = int(sys.argv[5])
+
+    adjust_start = round(WIDTH / 2) + 1
 
     # Load in the peaks file
     peaks = pd.read_table(path_peaks_file, header=None)
@@ -93,9 +96,9 @@ if __name__ == "__main__":
     # Build the seqlet positions
     combined_patterns = pd.concat([saved_pos_patterns, saved_neg_patterns])
     idx_vec = combined_patterns["example_idx"].values
-    tmp_starts = peaks.iloc[idx_vec,[2,-1]].sum(axis=1).values - WIDTH
+    tmp_starts = peaks.iloc[idx_vec,[1,-1]].sum(axis=1).values - adjust_start
     seqlet_bed = pd.DataFrame({\
-        "chr": peaks.iloc[idx_vec,1].values,
+        "chr": peaks.iloc[idx_vec,0].values,
         "start": tmp_starts+combined_patterns["start"].values,
         "end": tmp_starts+combined_patterns["end"].values,
         "name": combined_patterns["pattern"].values,
