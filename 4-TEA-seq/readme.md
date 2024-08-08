@@ -329,7 +329,7 @@ Each of these script files identifies CWM patterns for each of the contribution 
 
 The output of tfmodisco is only a subset of all the potential seqlets that could be found from the contribution score files. To search for all seqlet sites that match a CWM pattern, here we implement a custom script to scan for the DNA sequence that matches each of the CWM patterns identified by tfmodisco. 
 
->**Note**: we use the [`seqlet_analysis/generate_motif_files_from_modisco_h5_files.py`](seqlet_analysis/generate_motif_files_from_modisco_h5_files.py) script to extract the base frequencies of the CWM patterns identified by tfmodisco as a .pfm file for the scanning and we use the ['seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py'](seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py) script to extract the seqlet positions as a bed file.
+>**Note**: we use the [`seqlet_analysis/generate_motif_files_from_modisco_h5_files.py`](seqlet_analysis/generate_motif_files_from_modisco_h5_files.py) script to extract the base frequencies of the CWM patterns identified by tfmodisco as a .pfm file for the scanning and we use the ['seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py'](seqlet_analysis/generate_seqlet_bed_from_modisco_h5_file.py) script to extract the seqlet positions as a bed file. <div style="color:red;">For the peaks/regions, you must use the `<output_prefix>.interpreted_regions.bed` file output from `chrombpnet contribs_bw` so that idx coordinates pulled from the tfmodisco-lite file are accurate. The seqlet coordinates currently depend on the `start` (second column of bed file) and `offset` last column of bedfile, as well as the `width` parameter used by tfmodisco-lite (default is currently 400)</span>
 
 <br>
 
