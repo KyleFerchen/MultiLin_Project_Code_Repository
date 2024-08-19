@@ -353,6 +353,8 @@ For each of the expressed genes, we identify seqlets within the same TAD as the 
 
 >['seqlet_analysis/seqlet_to_gene_correlation_heatmap.ipynb'](seqlet_analysis/seqlet_to_gene_correlation_heatmap.ipynb)
 
+>**Note**: we cluster the genes based on their patterns of correlation to seqlets using hierarchical clustering, and then using MarkerFinder to associate each of the seqlets with each of these gene clusters here: [cluster_gene_to_seqlet_correlations.ipynb](seqlet_analysis/cluster_gene_to_seqlet_correlations.ipynb)
+
 Generates the pairwise Pearson correlation heatmap between gene expression and seqlet contribution score values.
 
 <br>
