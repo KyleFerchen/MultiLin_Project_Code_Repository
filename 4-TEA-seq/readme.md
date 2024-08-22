@@ -355,6 +355,8 @@ For each of the expressed genes, we identify seqlets within the same TAD as the 
 
 >**Note**: we cluster the genes based on their patterns of correlation to seqlets using hierarchical clustering, and then using MarkerFinder to associate each of the seqlets with each of these gene clusters here: [cluster_gene_to_seqlet_correlations.ipynb](seqlet_analysis/cluster_gene_to_seqlet_correlations.ipynb)
 
+>**Note**: we annotate the patterns called by tfmodisco by scraping the top match from the output `.html` files, and using the CIS-BP2 annotation, detailed in this script: [annotate_cisbp2_overlap_with_modisco_patterns.ipynb](seqlet_analysis/annotate_cisbp2_overlap_with_modisco_patterns.ipynb)
+
 Generates the pairwise Pearson correlation heatmap between gene expression and seqlet contribution score values.
 
 <br>
