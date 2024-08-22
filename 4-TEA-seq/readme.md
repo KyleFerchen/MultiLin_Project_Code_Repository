@@ -401,6 +401,8 @@ Here we are trying to use the seqlet contribution scores as a means to link cand
 
 >['grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
 
+>**Note**: we calculate motif similarities between known motifs with the CIS-BP2 database and the tfmodisco patterns independenlty, as many TFs of the same family can likely bind to the same tfmodisco pattern: [annotate_modisco_patterns_with_cisbp2_motifs.ipynb](grn/annotate_modisco_patterns_with_cisbp2_motifs.ipynb)
+
 To assign and score the TF-gene connections, we annotate the seqlets with TF identities by calculating the similarity of the seqlet DNA pattern to previously identified transcription factor motifs (Cisbp2 database). 
 
 ## 2. Score the TF to gene links
