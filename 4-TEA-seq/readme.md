@@ -94,9 +94,9 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [4. Score TF to gene links for surface proteins](#4-score-tf-to-gene-links-for-surface-proteins)
 - [5. Seqlet to gene correlation heatmap - surface proteins](#5-seqlet-to-gene-correlation-heatmap---surface-proteins)
 - [6. Seqlet to gene correlation subplots - surface proteins](#6-seqlet-to-gene-correlation-subplots---surface-proteins)
-- [Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs](#7-annotate-modisco-patterns-with-transcription-factors-using-cis-bp2-annotated-motifs)
-- [Build interaction file for plotting GRN with Cytoscape](#8-build-interaction-file-for-plotting-with-cytoscape)
--[Scoring GRN connections for each cluster](#9-scoring-grn-connections-for-each-cluster)
+- [7. Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs](#7-annotate-modisco-patterns-with-transcription-factors-using-cis-bp2-annotated-motifs)
+- [8. Build interaction file for plotting GRN with Cytoscape](#8-build-interaction-file-for-plotting-with-cytoscape)
+- [9. Scoring GRN connections for each cluster](#9-scoring-grn-connections-for-each-cluster)
 
 
 </div>
