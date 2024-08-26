@@ -441,6 +441,27 @@ This code makes the expression heatmaps for the seqlets and the genes encoding s
 
 <br>
 
+## 7. Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs
+
+>['GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
+
+This script is used to link the transcription factors to the motif patterns identified by tfmodisco.
+
+<br>
+
+## 8. Build interaction file for plotting with Cytoscape
+
+>[]()
+
+This file is used to build the connections file required for plotting network connections with Cytoscape.
+
+<br>
+
+## 9. Scoring GRN connections for each cluster
+
+>[]()
+
+This script is used to score each of the TF to target gene connections for each cluster in the dataset to build cluster specific gene regulatory networks.
 
 
 <a href="#outline" style="display: block; position: fixed; bottom: 20px; right: 20px; padding: 10px; background-color: #333; color: #fff; text-decoration: none; z-index: 9999;">Back to Outline</a>
