@@ -455,7 +455,7 @@ This script is used to link the transcription factors to the motif patterns iden
 
 ## 8. Build interaction file for plotting with Cytoscape
 
->[]()
+>['make_original_network_files.ipynb'](grn/make_original_network_files.ipynb)
 
 This file is used to build the connections file required for plotting network connections with Cytoscape.
 
@@ -463,7 +463,7 @@ This file is used to build the connections file required for plotting network co
 
 ## 9. Scoring GRN connections for each cluster
 
->[]()
+>['edit_network_to_clusters.ipynb'](grn/edit_network_to_clusters.ipynb)
 
 This script is used to score each of the TF to target gene connections for each cluster in the dataset to build cluster specific gene regulatory networks.
 
