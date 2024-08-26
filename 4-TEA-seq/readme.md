@@ -355,6 +355,8 @@ For each of the expressed genes, we identify seqlets within the same TAD as the 
 
 >**Note**: we cluster the genes based on their patterns of correlation to seqlets using hierarchical clustering, and then using MarkerFinder to associate each of the seqlets with each of these gene clusters here: [cluster_gene_to_seqlet_correlations.ipynb](seqlet_analysis/cluster_gene_to_seqlet_correlations.ipynb)
 
+>**Note**: we annotate the patterns called by tfmodisco by scraping the top match from the output `.html` files, and using the CIS-BP2 annotation, detailed in this script: [annotate_cisbp2_overlap_with_modisco_patterns.ipynb](seqlet_analysis/annotate_cisbp2_overlap_with_modisco_patterns.ipynb)
+
 Generates the pairwise Pearson correlation heatmap between gene expression and seqlet contribution score values.
 
 <br>
@@ -398,6 +400,8 @@ Here we are trying to use the seqlet contribution scores as a means to link cand
 ## 1. Identify and score TF to gene connections
 
 >['grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
+
+>**Note**: we calculate motif similarities between known motifs with the CIS-BP2 database and the tfmodisco patterns independenlty, as many TFs of the same family can likely bind to the same tfmodisco pattern: [annotate_modisco_patterns_with_cisbp2_motifs.ipynb](grn/annotate_modisco_patterns_with_cisbp2_motifs.ipynb)
 
 To assign and score the TF-gene connections, we annotate the seqlets with TF identities by calculating the similarity of the seqlet DNA pattern to previously identified transcription factor motifs (Cisbp2 database). 
 
