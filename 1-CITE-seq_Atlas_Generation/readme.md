@@ -113,7 +113,7 @@ This script was used to plot the scTriangulate metrics over the integrated UMAP.
 
 >['Fig_1g/HIVE_and_10X_Genomics_Integrated_UMAP_Embedding.R'](Fig_1g/HIVE_and_10X_Genomics_Integrated_UMAP_Embedding.R)
 
-Seurate was used to create the integrated RNA-seq UMAP. The resulting integrated UMAP coordinates for each relevant scRNA-seq dataset can be found here: ['Fig_1g/integrated_umap_coordinates'](Fig_1g/integrated_umap_coordinates).
+Seurat was used to create the integrated RNA-seq UMAP. The resulting integrated UMAP coordinates for each relevant scRNA-seq dataset can be found here: ['Fig_1g/integrated_umap_coordinates'](Fig_1g/integrated_umap_coordinates).
 
 <br>
 
