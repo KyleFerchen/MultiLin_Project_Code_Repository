@@ -94,6 +94,10 @@ These populations enrich for the hematopoietic stem cells, the multilineage prog
 - [4. Score TF to gene links for surface proteins](#4-score-tf-to-gene-links-for-surface-proteins)
 - [5. Seqlet to gene correlation heatmap - surface proteins](#5-seqlet-to-gene-correlation-heatmap---surface-proteins)
 - [6. Seqlet to gene correlation subplots - surface proteins](#6-seqlet-to-gene-correlation-subplots---surface-proteins)
+- [7. Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs](#7-annotate-modisco-patterns-with-transcription-factors-using-cis-bp2-annotated-motifs)
+- [8. Build interaction file for plotting GRN with Cytoscape](#8-build-interaction-file-for-plotting-with-cytoscape)
+- [9. Scoring GRN connections for each cluster](#9-scoring-grn-connections-for-each-cluster)
+
 
 </div>
 
@@ -455,7 +459,7 @@ This script is used to link the transcription factors to the motif patterns iden
 
 ## 8. Build interaction file for plotting with Cytoscape
 
->[]()
+>['make_original_network_files.ipynb'](grn/make_original_network_files.ipynb)
 
 This file is used to build the connections file required for plotting network connections with Cytoscape.
 
@@ -463,9 +467,11 @@ This file is used to build the connections file required for plotting network co
 
 ## 9. Scoring GRN connections for each cluster
 
->[]()
+>['edit_network_to_clusters.ipynb'](grn/edit_network_to_clusters.ipynb)
 
 This script is used to score each of the TF to target gene connections for each cluster in the dataset to build cluster specific gene regulatory networks.
+
+<br><br><br>
 
 
 <a href="#outline" style="display: block; position: fixed; bottom: 20px; right: 20px; padding: 10px; background-color: #333; color: #fff; text-decoration: none; z-index: 9999;">Back to Outline</a>
