@@ -447,6 +447,8 @@ The pairwise seqlet to gene correlation heatmap is generated here.
 
 This code makes the expression heatmaps for the seqlets and the genes encoding surface proteins.
 
+>**Note**: here we are sampling 50 cells per cluster, carried out in [identify_markers_and_generate_heatmaps.ipynb](../1-CITE-seq_Atlas_Generation/Fig_1h/identify_markers_and_generate_heatmaps.ipynb), though the choice will largely depend on the dataset being used.
+
 <br>
 
 ## 7. Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs
