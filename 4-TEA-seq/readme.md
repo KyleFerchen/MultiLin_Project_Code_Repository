@@ -371,6 +371,8 @@ Generates the pairwise Pearson correlation heatmap between gene expression and s
 
 This generates the paired seqlet and gene expression subplots for the correlation heatmap. This visualizes the level across the clusters.
 
+>**Note**: here we are sampling 50 cells per cluster, carried out in [identify_markers_and_generate_heatmaps.ipynb](../1-CITE-seq_Atlas_Generation/Fig_1h/identify_markers_and_generate_heatmaps.ipynb), though the choice will largely depend on the dataset being used.
+
 <br>
 
 ## 6. Identify marker genes for pseudobulk clusters
@@ -446,8 +448,6 @@ The pairwise seqlet to gene correlation heatmap is generated here.
 >['grn/seqlet_to_gene_correlation_heatmap_subplots_surface_protein_terms.ipynb'](grn/seqlet_to_gene_correlation_heatmap_subplots_surface_protein_terms.ipynb)
 
 This code makes the expression heatmaps for the seqlets and the genes encoding surface proteins.
-
->**Note**: here we are sampling 50 cells per cluster, carried out in [identify_markers_and_generate_heatmaps.ipynb](../1-CITE-seq_Atlas_Generation/Fig_1h/identify_markers_and_generate_heatmaps.ipynb), though the choice will largely depend on the dataset being used.
 
 <br>
 
