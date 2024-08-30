@@ -405,7 +405,7 @@ Here we are trying to use the seqlet contribution scores as a means to link cand
 
 ## 1. Identify and score TF to gene connections
 
->['grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
+>['grn/combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
 
 >**Note**: we calculate motif similarities between known motifs with the CIS-BP2 database and the tfmodisco patterns independenlty, as many TFs of the same family can likely bind to the same tfmodisco pattern: [annotate_modisco_patterns_with_cisbp2_motifs.ipynb](grn/annotate_modisco_patterns_with_cisbp2_motifs.ipynb)
 
@@ -453,7 +453,7 @@ This code makes the expression heatmaps for the seqlets and the genes encoding s
 
 ## 7. Annotate modisco patterns with transcription factors using CIS-BP2 annotated motifs
 
->['GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/GRN_combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
+>['combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb'](grn/combine_seqlet_to_gene_to_custom_cisbp2_annotation.ipynb)
 
 This script is used to link the transcription factors to the motif patterns identified by tfmodisco.
 
